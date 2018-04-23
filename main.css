@@ -1,0 +1,217 @@
+.hover-state{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    z-index: 11;
+    background-color: rgba(255, 255,255, 0.5)
+}
+.hover-state:hover{
+    visibility: visible;
+}
+.padding{
+    padding: 40px;
+}
+
+.item-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 384px 384px 384px 384px;
+}
+.grid-item{
+    width: 384px; 
+    height: 216px;
+    overflow: hidden;
+}
+.grayscale{
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
+    z-index: 20;
+}
+.grayscale:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+.blur{
+    -webkit-filter: blur(5px);
+    -webkit-transition: .3s ease-in-out;
+    filter: blur(5px);
+    transition: .3s ease-in-out;
+
+}
+.blur:hover{
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+.zoom-in-1{
+    -webkit-transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+.zoom-in-1:hover{
+    -webkit-transform: scale(1.2);
+    -webkit-transition: .3s ease-in-out;
+    transform: scale(1.2);
+    transition: .3s ease-in-out;            
+}
+.zoom-in-2{
+    width: 384px;
+    height: auto;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.zoom-in-2:hover{
+    width: 420px;
+
+}
+.zoom-out-1{
+    -webkit-transform: scale(1.2);
+    -webkit-transition: .3s ease-in-out;
+    transform: scale(1.2);
+    transition: .3s  ease-in-out;
+}
+.zoom-out-1:hover{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.zoom-out-2{
+    width: 420px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.zoom-out-2:hover{
+    width: 384px;
+}
+.slide{
+    margin-left: 30px;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.slide:hover{
+    margin-left: 0;
+}
+.rotate-zoom-out{
+    -webkit-transform: rotate(10deg) scale(1.3);
+	transform: rotate(10deg) scale(1.3);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.rotate-zoom-out:hover{
+    -webkit-transform: rotate(0) scale(1);
+	transform: rotate(0) scale(1);
+}
+.sepia{
+    -webkit-filter: sepia(100%);
+	filter: sepia(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+.sepia:hover{
+    -webkit-filter: sepia(0);
+	filter: sepia(0);
+}
+.blur-grayscale{
+    -webkit-filter: grayscale(1) blur(3px);
+	filter: grayscale(1) blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+.blur-grayscale:hover{
+    -webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+}
+.opacity{
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+.opacity:hover{
+    opacity: .5;
+}
+.color-bg{
+    background: #1abc9c;
+}
+.color-filter{
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.color-filter:hover{
+    opacity: .5;
+}
+
+.flash:hover{
+    opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash{
+    0%{
+        opacity: .4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes flash{
+    0%{
+        opacity: .4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.glass{
+    position: absolute;
+    z-index: 10;
+}
+.glass::before{
+    position: absolute;
+    top:0;
+    left: -75%;
+    z-index: 15;
+    display: block;
+    content:'';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0)0%,rgba(255,255,255,.3)100%);
+    background: linear-gradient(to right, rgba(255,0,255,0) 0%,rgba(255,0,255,.3)100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.glass:hover::before{
+    -webkit-animation: glass .75s;
+    animation: glass .75s;
+}
+@-webkit-keyframes glass{
+
+    100%{
+        left:125%;
+    }
+}
+@keyframes glass{
+
+    100%{
+        left:125%;
+    }
+}
+
+
+
